@@ -1,11 +1,10 @@
-{% extends base.html %}
+{% extends 'filmy/base.html' %}
 
-{% block 'title '%}Uvodni stranka{% endblock %}
+{% block 'title' %}Home | {{ block.super }}{% endblock %}
 
-{% block 'main_content' %}
-
-<h1>Hello world</h1>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis natus nihil suscipit nesciunt, sequi officiis porro adipisci esse dignissimos quis voluptate, quam vel laborum excepturi quod? Ipsa pariatur aliquid eos!</p>
-
-
+{% block 'content' %}
+<h1>Ahoj Django</h1>
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. A perspiciatis minima, pariatur similique qui obcaecati ea incidunt hic, eveniet accusamus sed alias! Quidem, nam nesciunt beatae est ut sequi corrupti.
+</p>
 {% endblock %}
