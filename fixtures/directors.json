@@ -1,0 +1,12 @@
+[
+{
+  "model": "filmy.director",
+  "pk": 1,
+  "fields": {
+    "name": "Masa Gavr",
+    "birth_year": 2000,
+    "description": "ja",
+    "main_picture": ""
+  }
+}
+]

@@ -1,0 +1,35 @@
+[
+{
+  "model": "filmy.movie",
+  "pk": 1,
+  "fields": {
+    "name": "Sabina in Wonderland",
+    "year": 2024,
+    "footage": 180,
+    "description": "When the whimsical and imaginative Sabina, a curious and adventurous young woman, stumbles upon a hidden portal in her grandmother's attic, she is transported to a fantastical realm known as Wonderland. Unlike the Wonderland from fairy tales, this one is a mysterious and surreal world filled with eccentric characters, mind-bending landscapes, and a touch of danger. Sabina embarks on an extraordinary journey to uncover the secrets of this strange land, encountering talking animals, mischievous spirits, and a quirky guide named Horatio, who becomes both friend and mentor. As Sabina navigates the challenges and wonders of Wonderland, she discovers the strength within herself to confront her deepest fears and uncover the truth about her family's past. \"Sabina in Wonderland\" is a visually stunning and emotionally uplifting tale that reminds us that the greatest adventures often begin with a single step into the unknown.",
+    "main_picture": ""
+  }
+},
+{
+  "model": "filmy.movie",
+  "pk": 2,
+  "fields": {
+    "name": "Seba on cestách",
+    "year": 1978,
+    "footage": 66,
+    "description": "Meet Seba, an energetic and curious young man with an insatiable thirst for adventure. \"Seba on cestách\" follows his journey as he travels across the globe, exploring new cultures, tasting exotic foods, and meeting fascinating people. Each episode brings Seba to a different country, where he dives deep into local traditions, tackles unique challenges, and learns valuable life lessons. With his trusty backpack and a heart full of wanderlust, Seba’s travels are not just about seeing new places, but about connecting with the world in meaningful ways. Join Seba on this inspiring and visually captivating journey that celebrates the spirit of exploration and the joy of discovering the unknown.",
+    "main_picture": ""
+  }
+},
+{
+  "model": "filmy.movie",
+  "pk": 3,
+  "fields": {
+    "name": "Natytouille",
+    "year": 2005,
+    "footage": 120,
+    "description": "In the bustling streets of Paris, amidst the aroma of freshly baked croissants and the hustle of daily life, there’s a small bistro with big dreams. Meet Naty, a spirited young chef with a flair for flavor and a heart full of culinary ambition. \"Natytouille\" follows Naty’s journey as she embarks on a quest to turn her humble bistro into a Michelin-starred restaurant. With her trusty spatula in hand and a passion for cooking that knows no bounds, Naty sets out to conquer the competitive world of haute cuisine. \r\nBut the path to culinary success is not without its challenges. Along the way, Naty must navigate the pressures of running a kitchen, fend off rivals who are eager to see her fail, and find the courage to stay true to her vision, even when the odds seem stacked against her. With the help of a ragtag team of misfit chefs, including a flamboyant pastry chef and a grumpy sous chef with a secret soft spot, Naty embarks on a gastronomic adventure that will test her skills, challenge her creativity, and ultimately prove that with passion, perseverance, and a pinch of magic, even the wildest culinary dreams can come true. Get ready to savor the flavors of friendship, love, and the joy of cooking in \"Natytouille\" – a heartwarming tale that will leave you hungry for more.",
+    "main_picture": ""
+  }
+}
+]
