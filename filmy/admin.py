@@ -3,7 +3,11 @@ from filmy.models import Movie, Director, Genre, Actor
 
 
 class MovieAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id", "name", "year", "footage", "director", "genres_display"]
+    list_display_links = ["id", "name"]
+    search_fields = ["=id", "name", "director_name"]
+    list_filter = ["year", "genres"]
+    list_editable = ["year", "footage", "director"]
 
 class DirectorAdmin(admin.ModelAdmin):
     pass
@@ -13,8 +17,6 @@ class GenreAdmin(admin.ModelAdmin):
 
 class ActorAdmin(admin.ModelAdmin):
     pass
-
-
 
 admin.site.register(Movie, MovieAdmin)
 
