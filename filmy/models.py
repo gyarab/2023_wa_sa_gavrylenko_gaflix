@@ -23,7 +23,6 @@ class Director(models.Model):
     description = models.TextField(blank=True)
     main_picture = models.CharField(blank=True, default="", max_length = 2000)
 
-
     def __str__(self):
         return self.name
 
@@ -32,13 +31,14 @@ class Actor(models.Model):
     birth_year = models.PositiveSmallIntegerField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     main_picture = models.CharField(blank=True, default="", max_length = 2000)
-
     
     def __str__(self):
         return self.name
+    
 
 class Genre(models.Model):
     name = models.CharField(max_length=300)
 
     def __str__(self):
         return self.name
+    

@@ -7,16 +7,25 @@ class MovieAdmin(admin.ModelAdmin):
     list_display_links = ["id", "name"]
     search_fields = ["=id", "name", "director_name"]
     list_filter = ["year", "genres"]
-    list_editable = ["year", "footage", "director"]
+    list_editable = ["year", "footage"]
 
 class DirectorAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id", "name", "birth_year", "description"]
+    list_display_links = ["id", "name"]
+    search_fields = ["=id", "name"]
+    list_editable = ["description"]
 
 class GenreAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id", "name"]
+    list_display_links = ["id", "name"]
+    search_fields = ["=id", "name"]
+    list_filter = ["name"]
 
 class ActorAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id", "name", "birth_year", "description"]
+    list_display_links = ["id", "name"]
+    search_fields = ["=id", "name"]
+    list_editable = ["description"]
 
 admin.site.register(Movie, MovieAdmin)
 
