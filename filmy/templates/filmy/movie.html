@@ -8,9 +8,8 @@
     <h2>{{movie.director}}</h2>
     <img src="{% if movie.main_picture %}{{movie.main_picture}}{% endif %}" alt="">
     <p>{{ movie.description }}</p>
-    <ul>
-        <li>prvni</li>
-        <li>druhy</li>
-        <li>treti</li>
-    </ul>
+    {% for genre in movie.genres.all%}
+        <span class="badge rounded-pill text-bg-primary">{{ genre.name}}</span>
+    {% endfor %}
+
 {% endblock %}
