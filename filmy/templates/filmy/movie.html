@@ -4,12 +4,17 @@
 
 {% block 'content' %}
     <h1>{{ movie.name }}</h1>
-
-    <h2>{{movie.director}}</h2>
     <img src="{% if movie.main_picture %}{{movie.main_picture}}{% endif %}" alt="">
     <p>{{ movie.description }}</p>
+
     {% for genre in movie.genres.all%}
         <span class="badge rounded-pill text-bg-primary">{{ genre.name}}</span>
     {% endfor %}
+    <p><strong>Release dates:</strong> {{ movie.year }}</p>
+    <p><strong>Running time:</strong> {{ movie.footage }} minutes</p>
+    <p><strong>Directed by:</strong> <a href="{% url 'director' movie.director.id %}">{{ movie.director }}</a></p>
+    <p><strong>Actors:</strong> {% for actor in movie.actors.all %}<a href="{% url 'actor' actor.id %}">{{ actor }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+
+    <a href="{% url 'movies' %}" class="btn btn-primary" hre>Zpět</a>
 
 {% endblock %}
