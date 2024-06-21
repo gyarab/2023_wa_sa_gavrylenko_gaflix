@@ -12,17 +12,17 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.wa-vch2-http.rule=Host(`gm.wa.dtcloud.cz`)"
-      - "traefik.http.routers.wa-vch2-http.entrypoints=web"
-      - "traefik.http.routers.wa-vch2-http.middlewares=wa-vch2-redirect-https@docker"
+      - "traefik.http.routers.wa-gm-http.rule=Host(`gm.wa.dtcloud.cz`)"
+      - "traefik.http.routers.wa-gm-http.entrypoints=web"
+      - "traefik.http.routers.wa-gm-http.middlewares=wa-gm-redirect-https@docker"
 
-      - "traefik.http.middlewares.wa-vch2-redirect-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.wa-vch2-redirect-https.redirectscheme.permanent=true"
+      - "traefik.http.middlewares.wa-gm-redirect-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.wa-gm-redirect-https.redirectscheme.permanent=true"
 
-      - "traefik.http.routers.wa-vch2-https.rule=Host(`gm.wa.dtcloud.cz`)"
-      - "traefik.http.routers.wa-vch2-https.entrypoints=websecure"
-      - "traefik.http.routers.wa-vch2-https.tls=true"
-      - "traefik.http.routers.wa-vch2-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.wa-gm-https.rule=Host(`gm.wa.dtcloud.cz`)"
+      - "traefik.http.routers.wa-gm-https.entrypoints=websecure"
+      - "traefik.http.routers.wa-gm-https.tls=true"
+      - "traefik.http.routers.wa-gm-https.tls.certresolver=letsencrypt"
 
   static:
     image: nginx:alpine
@@ -34,14 +34,19 @@ services:
     labels:
       - "traefik.enable=true"
 
-      - "traefik.http.routers.wa-vch2-static-http.rule=Host(`gm.wa.dtcloud.cz`) && PathPrefix(`/static`)"
-      - "traefik.http.routers.wa-vch2-static-http.entrypoints=web"
-      - "traefik.http.routers.wa-vch2-static-http.middlewares=wa-vch2-static-redirect-https@docker"
+      - "traefik.http.routers.wa-gm-static-http.rule=Host(`gm.wa.dtcloud.cz`) && PathPrefix(`/static`)"
+      - "traefik.http.routers.wa-gm-static-http.entrypoints=web"
+      - "traefik.http.routers.wa-gm-static-http.middlewares=wa-gm-static-redirect-https@docker"
 
-      - "traefik.http.middlewares.wa-vch2-static-redirect-https.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.wa-vch2-static-redirect-https.redirectscheme.permanent=true"
+      - "traefik.http.middlewares.wa-gm-static-redirect-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.wa-gm-static-redirect-https.redirectscheme.permanent=true"
 
-      - "traefik.http.routers.wa-vch2-static-https.rule=Host(`gm.wa.dtcloud.cz`) && PathPrefix(`/static`)"
-      - "traefik.http.routers.wa-vch2-static-https.entrypoints=websecure"
-      - "traefik.http.routers.wa-vch2-static-https.tls=true"
-      - "traefik.http.routers.wa-vch2-static-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.wa-gm-static-https.rule=Host(`gm.wa.dtcloud.cz`) && PathPrefix(`/static`)"
+      - "traefik.http.routers.wa-gm-static-https.entrypoints=websecure"
+      - "traefik.http.routers.wa-gm-static-https.tls=true"
+      - "traefik.http.routers.wa-gm-static-https.tls.certresolver=letsencrypt"
+
+networks:
+  default:
+    name: gateaway
+    external: true
